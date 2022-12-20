@@ -1,3 +1,5 @@
+import type { City } from './types';
+
 type RawWeather = {
   cod: string;
   message: number;
@@ -56,7 +58,7 @@ type RawWeather = {
 
 export type Weather = {
   city: {
-    id: number;
+    id: string;
     name: string;
   };
   forecast: Array<{
@@ -67,7 +69,7 @@ export type Weather = {
 
 const api = {
   weather: {
-    fetch: async (lat: number, lon: number): Promise<Weather> => {
+    fetch: async (city: City): Promise<Weather> => {
       const response: RawWeather = {
         cod: '200',
         message: 0,
@@ -243,8 +245,8 @@ const api = {
       };
       return {
         city: {
-          id: response.city.id,
-          name: response.city.name,
+          id: city.id,
+          name: city.name,
         },
         forecast: response.list.map((item) => ({
           min: Math.round(item.main.temp_min - 273.15),
