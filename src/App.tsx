@@ -41,7 +41,6 @@ function App() {
   return (
     <main>
       <select value={city?.id} onChange={handleChangeCity}>
-        <option value="">Seleccione una ciudad</option>
         {CITIES.map((city) => (
           <option key={city.id} value={city.id}>
             {city.name}
@@ -52,7 +51,7 @@ function App() {
       <ul>
         {weather.forecast.map((forecast, index) => (
           <li key={index}>
-            Min: {forecast.min} - Max: {forecast.max}
+            {forecast.date}: Min: {forecast.min} °C, Max: {forecast.max} °C
           </li>
         ))}
       </ul>

@@ -1,6 +1,6 @@
 import type { City } from './types';
 
-type RawWeather = {
+export type RawWeather = {
   cod: string;
   message: number;
   cnt: number;
@@ -61,11 +61,33 @@ export type Weather = {
     id: string;
     name: string;
   };
-  forecast: Array<{
+  forecast: {
+    date: string;
     min: number;
     max: number;
-  }>;
+  }[];
 };
+
+export function kelvinToCelsius(temp: number): number {
+  return Math.round(temp - 273.15);
+}
+
+export function formatWeather(weather: RawWeather): Weather {
+  const {0: first, 8: second, 16: third, 24: fourth, 32: fifth} = weather.list;
+  console.log(weather.list[0].dt);
+  return {
+    city: {
+      id: String(weather.city.id),
+      name: weather.city.name,
+    },
+    forecast: [first, second, third, fourth, fifth].map((forecast) => ({
+      date: new Date(forecast.dt * 1000).toLocaleDateString('en-AR'),
+      min: kelvinToCelsius(forecast.main.temp_min),
+      max: kelvinToCelsius(forecast.main.temp_max)
+    }))
+  };
+}
+
 
 const api = {
   weather: {
@@ -76,17 +98,8 @@ const api = {
         }&appid=${import.meta.env.VITE_API_KEY}`
       );
       const response: RawWeather = await request.json();
-      const {0: first, 8: second, 16: third, 24: fourth, 32: fifth} = response.list;
-      return {
-        city: {
-          id: city.id,
-          name: city.name,
-        },
-        forecast: [first, second, third, fourth, fifth].map((item) => ({
-          min: Math.round(item.main.temp_min - 273.15),
-          max: Math.round(item.main.temp_max - 273.15),
-        })),
-      };
+
+      return formatWeather(response);
     },
   },
 };
