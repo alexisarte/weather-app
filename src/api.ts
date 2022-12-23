@@ -1,5 +1,15 @@
 import type { City } from './types';
 
+const DAYS = [
+  'Domingo',
+  'Lunes',
+  'Martes',
+  'Miércoles',
+  'Jueves',
+  'Viernes',
+  'Sábado',
+];
+
 export type RawWeather = {
   cod: string;
   message: number;
@@ -62,9 +72,11 @@ export type Weather = {
     name: string;
   };
   forecast: {
-    date: string;
+    day: string;
+    temp: number;
     min: number;
     max: number;
+    icon: string;
   }[];
 };
 
@@ -73,7 +85,13 @@ export function kelvinToCelsius(temp: number): number {
 }
 
 export function formatWeather(weather: RawWeather): Weather {
-  const {0: first, 8: second, 16: third, 24: fourth, 32: fifth} = weather.list;
+  const {
+    0: first,
+    8: second,
+    16: third,
+    24: fourth,
+    32: fifth,
+  } = weather.list;
   console.log(weather.list[0].dt);
   return {
     city: {
@@ -81,20 +99,21 @@ export function formatWeather(weather: RawWeather): Weather {
       name: weather.city.name,
     },
     forecast: [first, second, third, fourth, fifth].map((forecast) => ({
-      date: new Date(forecast.dt * 1000).toLocaleDateString('en-AR'),
+      day: DAYS[new Date(forecast.dt * 1000).getDay()],
+      temp: kelvinToCelsius(forecast.main.temp),
       min: kelvinToCelsius(forecast.main.temp_min),
-      max: kelvinToCelsius(forecast.main.temp_max)
-    }))
+      max: kelvinToCelsius(forecast.main.temp_max),
+      icon: forecast.weather[0].icon,
+    })),
   };
 }
-
 
 const api = {
   weather: {
     fetch: async (city: City): Promise<Weather> => {
       const request = await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${
-          city.lon
+        `https://api.openweathermap.org/data/2.5/forecast?q=${
+          city.name
         }&appid=${import.meta.env.VITE_API_KEY}`
       );
       const response: RawWeather = await request.json();
