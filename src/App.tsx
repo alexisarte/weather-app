@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-      <main>
+      <main className='text-center' >
         <select value={city?.id} onChange={handleChangeCity}>
           {CITIES.map((city) => (
             <option key={city.id} value={city.id}>
@@ -49,9 +49,9 @@ function App() {
         </select>
         <h1>{weather.city.name}</h1>
       </main>
-      <div className="grid grid-cols-4 gap-4 bg-blue-500 p-4">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 bg-blue-500 p-4">
         {weather.forecast.map((forecast, index) => (
-          <div key={index} className="w-3/4">
+          <div key={index} className='bg-white p-4 rounded-xl'>
             <CardWeather forecast={forecast} />
           </div>
         ))}

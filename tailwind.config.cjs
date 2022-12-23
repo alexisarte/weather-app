@@ -17,7 +17,7 @@ module.exports = {
         fontFresca: ['Fresca', 'sans-serif'],
         fontFuzzy: ['Fuzzy Bubbles', 'cursive'],
         fontGaldeano: ['Galdeano', 'sans-serif'],
-      },
+      }
     },
     backgroundImage: {
       'onboarding-background': "url('../assets/cat-dog-background.png')",
