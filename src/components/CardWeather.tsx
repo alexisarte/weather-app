@@ -17,7 +17,7 @@ export default function CardWeather({ forecast }: { forecast: Forecast }) {
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {forecast.day}
       </h5>
-      <ul className="font-normal text-gray-700 dark:text-gray-400">
+      <ul>
         <li>{forecast.temp} °C</li>
         <li>Humidity: {forecast.humidity}</li>
         <li>Visibility: {forecast.visibility}</li>
