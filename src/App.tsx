@@ -1,6 +1,5 @@
 import type { City } from './types';
 import React, { useEffect, useState } from 'react';
-import Select from 'react-select';
 import api, { type Weather } from './api';
 import CardWeather from './components/CardWeather';
 
@@ -38,7 +37,7 @@ function App() {
   }
 
   return (
-    <div className="bg-blue-400 h-screen py-12 text-white">
+    <div className="bg-blue-400 min-h-screen py-12 text-white">
       <main className="text-center">
         <select
           value={city?.id}

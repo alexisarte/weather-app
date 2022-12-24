@@ -11,178 +11,8 @@ describe('kelvinToCelsius', () => {
 
 // describe('formatWeather', () => {
 //   const RESPONSE: RawWeather = {
-//     cod: '200',
-//     message: 0,
-//     cnt: 40,
-//     list: [
-//       {
-//         dt: 1661871600,
-//         main: {
-//           temp: 296.76,
-//           feels_like: 296.98,
-//           temp_min: 296.76,
-//           temp_max: 297.87,
-//           pressure: 1015,
-//           sea_level: 1015,
-//           grnd_level: 933,
-//           humidity: 69,
-//           temp_kf: -1.11
-//         },
-//         weather: [
-//           {
-//             id: 500,
-//             main: 'Rain',
-//             description: 'light rain',
-//             icon: '10d'
-//           }
-//         ],
-//         clouds: {
-//           all: 100
-//         },
-//         wind: {
-//           speed: 0.62,
-//           deg: 349,
-//           gust: 1.18
-//         },
-//         visibility: 10000,
-//         pop: 0.32,
-//         rain: {
-//           '3h': 0.26
-//         },
-//         sys: {
-//           pod: 'd'
-//         },
-//         dt_txt: '2022-08-30 15:00:00'
-//       },
-//       {
-//         dt: 1661882400,
-//         main: {
-//           temp: 295.45,
-//           feels_like: 295.59,
-//           temp_min: 292.84,
-//           temp_max: 295.45,
-//           pressure: 1015,
-//           sea_level: 1015,
-//           grnd_level: 931,
-//           humidity: 71,
-//           temp_kf: 2.61
-//         },
-//         weather: [
-//           {
-//             id: 500,
-//             main: 'Rain',
-//             description: 'light rain',
-//             icon: '10n'
-//           }
-//         ],
-//         clouds: {
-//           all: 96
-//         },
-//         wind: {
-//           speed: 1.97,
-//           deg: 157,
-//           gust: 3.39
-//         },
-//         visibility: 10000,
-//         pop: 0.33,
-//         rain: {
-//           '3h': 0.57
-//         },
-//         sys: {
-//           pod: 'n'
-//         },
-//         dt_txt: '2022-08-30 18:00:00'
-//       },
-//       {
-//         dt: 1661893200,
-//         main: {
-//           temp: 292.46,
-//           feels_like: 292.54,
-//           temp_min: 290.31,
-//           temp_max: 292.46,
-//           pressure: 1015,
-//           sea_level: 1015,
-//           grnd_level: 931,
-//           humidity: 80,
-//           temp_kf: 2.15
-//         },
-//         weather: [
-//           {
-//             id: 500,
-//             main: 'Rain',
-//             description: 'light rain',
-//             icon: '10n'
-//           }
-//         ],
-//         clouds: {
-//           all: 68
-//         },
-//         wind: {
-//           speed: 2.66,
-//           deg: 210,
-//           gust: 3.58
-//         },
-//         visibility: 10000,
-//         pop: 0.7,
-//         rain: {
-//           '3h': 0.49
-//         },
-//         sys: {
-//           pod: 'n'
-//         },
-//         dt_txt: '2022-08-30 21:00:00'
-//       },
-//       {
-//         dt: 1662292800,
-//         main: {
-//           temp: 294.93,
-//           feels_like: 294.83,
-//           temp_min: 294.93,
-//           temp_max: 294.93,
-//           pressure: 1018,
-//           sea_level: 1018,
-//           grnd_level: 935,
-//           humidity: 64,
-//           temp_kf: 0
-//         },
-//         weather: [
-//           {
-//             id: 804,
-//             main: 'Clouds',
-//             description: 'overcast clouds',
-//             icon: '04d'
-//           }
-//         ],
-//         clouds: {
-//           all: 88
-//         },
-//         wind: {
-//           speed: 1.14,
-//           deg: 17,
-//           gust: 1.57
-//         },
-//         visibility: 10000,
-//         pop: 0,
-//         sys: {
-//           pod: 'd'
-//         },
-//         dt_txt: '2022-09-04 12:00:00'
-//       }
-//     ],
-//     city: {
-//       id: 3163858,
-//       name: 'Zocca',
-//       coord: {
-//         lat: 44.34,
-//         lon: 10.99
-//       },
-//       country: 'IT',
-//       population: 4593,
-//       timezone: 7200,
-//       sunrise: 1661834187,
-//       sunset: 1661882248
-//     }
-//   };
+//     cod:"200",message:0,cnt:40,list:[{dt:1671904800,main:{temp:293.6,feels_like:293.45,temp_min:293.6,temp_max:296.69,pressure:1015,sea_level:1015,grnd_level:1011,humidity:67,temp_kf:-3.09},weather:[{id:804,main:"Clouds",description:"overcast clouds",icon:"04d"}],clouds:{all:99},wind:{speed:6.29,deg:188,gust:7.42},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-24 18:00:00"},{dt:1671915600,main:{temp:294.29,feels_like:293.92,temp_min:294.29,temp_max:295.41,pressure:1015,sea_level:1015,grnd_level:1012,humidity:56,temp_kf:-1.12},weather:[{id:803,main:"Clouds",description:"broken clouds",icon:"04d"}],clouds:{all:79},wind:{speed:6.98,deg:172,gust:7.56},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-24 21:00:00"},{dt:1671926400,main:{temp:289.82,feels_like:289.24,temp_min:289.82,temp_max:289.82,pressure:1018,sea_level:1018,grnd_level:1015,humidity:65,temp_kf:0},weather:[{id:802,main:"Clouds",description:"scattered clouds",icon:"03n"}],clouds:{all:45},wind:{speed:5.61,deg:151,gust:9.71},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-25 00:00:00"},{dt:1671937200,main:{temp:287.35,feels_like:286.71,temp_min:287.35,temp_max:287.35,pressure:1019,sea_level:1019,grnd_level:1016,humidity:72,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01n"}],clouds:{all:0},wind:{speed:4.42,deg:165,gust:9.12},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-25 03:00:00"},{dt:1671948000,main:{temp:285.27,feels_like:284.55,temp_min:285.27,temp_max:285.27,pressure:1019,sea_level:1019,grnd_level:1015,humidity:77,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01n"}],clouds:{all:0},wind:{speed:3.81,deg:183,gust:8.37},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-25 06:00:00"},{dt:1671958800,main:{temp:284.15,feels_like:283.32,temp_min:284.15,temp_max:284.15,pressure:1019,sea_level:1019,grnd_level:1016,humidity:77,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:0},wind:{speed:2.74,deg:182,gust:5.17},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-25 09:00:00"},{dt:1671969600,main:{temp:289.83,feels_like:288.81,temp_min:289.83,temp_max:289.83,pressure:1019,sea_level:1019,grnd_level:1016,humidity:48,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:0},wind:{speed:3.17,deg:193,gust:4.45},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-25 12:00:00"},{dt:1671980400,main:{temp:295.27,feels_like:294.32,temp_min:295.27,temp_max:295.27,pressure:1018,sea_level:1018,grnd_level:1015,humidity:30,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:0},wind:{speed:2.91,deg:223,gust:4.36},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-25 15:00:00"},{dt:1671991200,main:{temp:298.42,feels_like:297.68,temp_min:298.42,temp_max:298.42,pressure:1015,sea_level:1015,grnd_level:1012,humidity:26,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:0},wind:{speed:2.97,deg:240,gust:4.97},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-25 18:00:00"},{dt:1672002000,main:{temp:297.67,feels_like:296.93,temp_min:297.67,temp_max:297.67,pressure:1014,sea_level:1014,grnd_level:1011,humidity:29,temp_kf:0},weather:[{id:802,main:"Clouds",description:"scattered clouds",icon:"03d"}],clouds:{all:40},wind:{speed:1.32,deg:223,gust:4.44},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-25 21:00:00"},{dt:1672012800,main:{temp:291.7,feels_like:291.1,temp_min:291.7,temp_max:291.7,pressure:1015,sea_level:1015,grnd_level:1012,humidity:57,temp_kf:0},weather:[{id:802,main:"Clouds",description:"scattered clouds",icon:"03n"}],clouds:{all:30},wind:{speed:3.9,deg:73,gust:6.31},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-26 00:00:00"},{dt:1672023600,main:{temp:290.34,feels_like:289.81,temp_min:290.34,temp_max:290.34,pressure:1017,sea_level:1017,grnd_level:1014,humidity:65,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01n"}],clouds:{all:5},wind:{speed:3.66,deg:103,gust:5.98},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-26 03:00:00"},{dt:1672034400,main:{temp:289.65,feels_like:289.24,temp_min:289.65,temp_max:289.65,pressure:1016,sea_level:1016,grnd_level:1013,humidity:72,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01n"}],clouds:{all:2},wind:{speed:2.38,deg:95,gust:3.33},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-26 06:00:00"},{dt:1672045200,main:{temp:287.97,feels_like:287.62,temp_min:287.97,temp_max:287.97,pressure:1016,sea_level:1016,grnd_level:1013,humidity:81,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:0},wind:{speed:2.01,deg:122,gust:3.56},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-26 09:00:00"},{dt:1672056000,main:{temp:293.5,feels_like:293.11,temp_min:293.5,temp_max:293.5,pressure:1016,sea_level:1016,grnd_level:1013,humidity:58,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:0},wind:{speed:1.48,deg:72,gust:1.09},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-26 12:00:00"},{dt:1672066800,main:{temp:298.4,feels_like:297.92,temp_min:298.4,temp_max:298.4,pressure:1014,sea_level:1014,grnd_level:1011,humidity:36,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:0},wind:{speed:0.66,deg:337,gust:3.32},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-26 15:00:00"},{dt:1672077600,main:{temp:300.27,feels_like:299.77,temp_min:300.27,temp_max:300.27,pressure:1012,sea_level:1012,grnd_level:1009,humidity:33,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:0},wind:{speed:2.82,deg:69,gust:3.66},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-26 18:00:00"},{dt:1672088400,main:{temp:296.35,feels_like:296.11,temp_min:296.35,temp_max:296.35,pressure:1011,sea_level:1011,grnd_level:1008,humidity:53,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:0},wind:{speed:6.1,deg:81,gust:5.94},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-26 21:00:00"},{dt:1672099200,main:{temp:292.71,feels_like:292.18,temp_min:292.71,temp_max:292.71,pressure:1011,sea_level:1011,grnd_level:1008,humidity:56,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01n"}],clouds:{all:0},wind:{speed:5.5,deg:91,gust:9.38},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-27 00:00:00"},{dt:1672110000,main:{temp:292.35,feels_like:292.1,temp_min:292.35,temp_max:292.35,pressure:1011,sea_level:1011,grnd_level:1008,humidity:68,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01n"}],clouds:{all:0},wind:{speed:5.17,deg:75,gust:9.17},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-27 03:00:00"},{dt:1672120800,main:{temp:291.94,feels_like:291.65,temp_min:291.94,temp_max:291.94,pressure:1011,sea_level:1011,grnd_level:1008,humidity:68,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01n"}],clouds:{all:0},wind:{speed:4.65,deg:53,gust:8.24},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-27 06:00:00"},{dt:1672131600,main:{temp:291.26,feels_like:290.75,temp_min:291.26,temp_max:291.26,pressure:1012,sea_level:1012,grnd_level:1008,humidity:62,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:4},wind:{speed:3.63,deg:23,gust:6.8},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-27 09:00:00"},{dt:1672142400,main:{temp:296.68,feels_like:296.16,temp_min:296.68,temp_max:296.68,pressure:1012,sea_level:1012,grnd_level:1009,humidity:41,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:3},wind:{speed:3.64,deg:355,gust:4.77},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-27 12:00:00"},{dt:1672153200,main:{temp:301.14,feels_like:300.24,temp_min:301.14,temp_max:301.14,pressure:1010,sea_level:1010,grnd_level:1007,humidity:30,temp_kf:0},weather:[{id:803,main:"Clouds",description:"broken clouds",icon:"04d"}],clouds:{all:54},wind:{speed:3.64,deg:344,gust:4.08},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-27 15:00:00"},{dt:1672164000,main:{temp:304.25,feels_like:302.46,temp_min:304.25,temp_max:304.25,pressure:1008,sea_level:1008,grnd_level:1005,humidity:23,temp_kf:0},weather:[{id:803,main:"Clouds",description:"broken clouds",icon:"04d"}],clouds:{all:67},wind:{speed:3.25,deg:24,gust:3.41},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-27 18:00:00"},{dt:1672174800,main:{temp:302.04,feels_like:300.93,temp_min:302.04,temp_max:302.04,pressure:1005,sea_level:1005,grnd_level:1003,humidity:30,temp_kf:0},weather:[{id:803,main:"Clouds",description:"broken clouds",icon:"04d"}],clouds:{all:65},wind:{speed:4.54,deg:49,gust:6.02},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-27 21:00:00"},{dt:1672185600,main:{temp:296.89,feels_like:296.83,temp_min:296.89,temp_max:296.89,pressure:1005,sea_level:1005,grnd_level:1002,humidity:58,temp_kf:0},weather:[{id:803,main:"Clouds",description:"broken clouds",icon:"04n"}],clouds:{all:69},wind:{speed:4.16,deg:56,gust:8.98},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-28 00:00:00"},{dt:1672196400,main:{temp:298.02,feels_like:297.84,temp_min:298.02,temp_max:298.02,pressure:1006,sea_level:1006,grnd_level:1003,humidity:49,temp_kf:0},weather:[{id:803,main:"Clouds",description:"broken clouds",icon:"04n"}],clouds:{all:57},wind:{speed:5.1,deg:39,gust:12.39},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-28 03:00:00"},{dt:1672207200,main:{temp:295.23,feels_like:294.98,temp_min:295.23,temp_max:295.23,pressure:1005,sea_level:1005,grnd_level:1002,humidity:57,temp_kf:0},weather:[{id:803,main:"Clouds",description:"broken clouds",icon:"04n"}],clouds:{all:61},wind:{speed:2.93,deg:60,gust:4.55},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-28 06:00:00"},{dt:1672218000,main:{temp:293.71,feels_like:293.07,temp_min:293.71,temp_max:293.71,pressure:1006,sea_level:1006,grnd_level:1003,humidity:48,temp_kf:0},weather:[{id:803,main:"Clouds",description:"broken clouds",icon:"04d"}],clouds:{all:53},wind:{speed:4.04,deg:232,gust:8.6},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-28 09:00:00"},{dt:1672228800,main:{temp:298.4,feels_like:298.1,temp_min:298.4,temp_max:298.4,pressure:1008,sea_level:1008,grnd_level:1005,humidity:43,temp_kf:0},weather:[{id:803,main:"Clouds",description:"broken clouds",icon:"04d"}],clouds:{all:58},wind:{speed:5.46,deg:198,gust:7.19},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-28 12:00:00"},{dt:1672239600,main:{temp:303.59,feels_like:302.68,temp_min:303.59,temp_max:303.59,pressure:1009,sea_level:1009,grnd_level:1006,humidity:34,temp_kf:0},weather:[{id:801,main:"Clouds",description:"few clouds",icon:"02d"}],clouds:{all:14},wind:{speed:5.9,deg:184,gust:8.28},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-28 15:00:00"},{dt:1672250400,main:{temp:304.77,feels_like:302.88,temp_min:304.77,temp_max:304.77,pressure:1009,sea_level:1009,grnd_level:1006,humidity:22,temp_kf:0},weather:[{id:801,main:"Clouds",description:"few clouds",icon:"02d"}],clouds:{all:16},wind:{speed:6.05,deg:167,gust:9.07},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-28 18:00:00"},{dt:1672261200,main:{temp:302.41,feels_like:300.94,temp_min:302.41,temp_max:302.41,pressure:1011,sea_level:1011,grnd_level:1008,humidity:24,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:9},wind:{speed:7.8,deg:168,gust:9.74},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-28 21:00:00"},{dt:1672272000,main:{temp:294.9,feels_like:294.17,temp_min:294.9,temp_max:294.9,pressure:1016,sea_level:1016,grnd_level:1013,humidity:40,temp_kf:0},weather:[{id:801,main:"Clouds",description:"few clouds",icon:"02n"}],clouds:{all:21},wind:{speed:8.46,deg:148,gust:12.29},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-29 00:00:00"},{dt:1672282800,main:{temp:290.37,feels_like:289.48,temp_min:290.37,temp_max:290.37,pressure:1018,sea_level:1018,grnd_level:1015,humidity:51,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01n"}],clouds:{all:10},wind:{speed:6.86,deg:136,gust:12.77},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-29 03:00:00"},{dt:1672293600,main:{temp:288.13,feels_like:287.33,temp_min:288.13,temp_max:288.13,pressure:1017,sea_level:1017,grnd_level:1014,humidity:63,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01n"}],clouds:{all:6},wind:{speed:4.64,deg:141,gust:9.84},visibility:10000,pop:0,sys:{pod:"n"},dt_txt:"2022-12-29 06:00:00"},{dt:1672304400,main:{temp:287.58,feels_like:286.85,temp_min:287.58,temp_max:287.58,pressure:1017,sea_level:1017,grnd_level:1014,humidity:68,temp_kf:0},weather:[{id:802,main:"Clouds",description:"scattered clouds",icon:"03d"}],clouds:{all:25},wind:{speed:3.18,deg:147,gust:6.03},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-29 09:00:00"},{dt:1672315200,main:{temp:293.76,feels_like:292.97,temp_min:293.76,temp_max:293.76,pressure:1019,sea_level:1019,grnd_level:1016,humidity:42,temp_kf:0},weather:[{id:801,main:"Clouds",description:"few clouds",icon:"02d"}],clouds:{all:15},wind:{speed:2.79,deg:118,gust:3.19},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-29 12:00:00"},{dt:1672326000,main:{temp:299.13,feels_like:299.13,temp_min:299.13,temp_max:299.13,pressure:1017,sea_level:1017,grnd_level:1014,humidity:27,temp_kf:0},weather:[{id:800,main:"Clear",description:"clear sky",icon:"01d"}],clouds:{all:4},wind:{speed:2.1,deg:51,gust:3.14},visibility:10000,pop:0,sys:{pod:"d"},dt_txt:"2022-12-29 15:00:00"}],city:{id:3432043,name:"La Plata",coord:{lat:-34.9215,lon:-57.9545},country:"AR",population:694167,timezone:-10800,sunrise:1671870977,sunset:1671923182}
+// };
 
 //   test('should format raw weather correctly', () => {
 //     const actual = formatWeather(RESPONSE);
@@ -192,11 +22,11 @@ describe('kelvinToCelsius', () => {
 //         name: 'Remedios de Escalada'
 //       },
 //       forecast: [
-//         { date: '12/22/2022', min: 23, max: 24 },
-//         { date: '12/23/2022', min: 25, max: 25 },
-//         { date: '12/24/2022', min: 23, max: 23 },
-//         { date: '12/25/2022', min: 17, max: 17 },
-//         { date: '12/26/2022', min: 20, max: 20 }
+//         { day: , min: 23, max: 24 },
+//         { day: , min: 25, max: 25 },
+//         { day: , min: 23, max: 23 },
+//         { day: , min: 17, max: 17 },
+//         { day: , min: 20, max: 20 }
 //       ]
 //     };
 //     expect(actual).toStrictEqual(expected);

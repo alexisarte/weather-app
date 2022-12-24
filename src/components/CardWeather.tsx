@@ -1,7 +1,5 @@
 import React from 'react';
 
-// import {Card} from 'flowbite-react';
-
 interface Forecast {
   day: string;
   min: number;

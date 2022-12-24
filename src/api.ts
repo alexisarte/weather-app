@@ -94,7 +94,6 @@ export function formatWeather(weather: RawWeather): Weather {
     24: fourth,
     32: fifth,
   } = weather.list;
-  console.log(weather.list[0].dt);
   return {
     city: {
       id: String(weather.city.id),
