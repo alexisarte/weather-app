@@ -52,7 +52,7 @@ function App() {
         </select>
         <h1 className="m-4 text-3xl">{weather.city.name}</h1>
       </main>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-4">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] gap-4 p-4">
         {weather.forecast.map((forecast, index) => (
           <div key={index} className="p-4 rounded-xl border">
             <CardWeather forecast={forecast} />

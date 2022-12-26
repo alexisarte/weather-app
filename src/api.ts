@@ -79,6 +79,7 @@ export type Weather = {
     icon: string;
     humidity: number;
     visibility: number;
+    pressure: number;
   }>;
 };
 
@@ -106,7 +107,8 @@ export function formatWeather(weather: RawWeather): Weather {
       max: kelvinToCelsius(forecast.main.temp_max),
       icon: forecast.weather[0].icon,
       humidity: forecast.main.humidity,
-      visibility: forecast.visibility,      
+      visibility: forecast.visibility,    
+      pressure: forecast.main.pressure,
     })),
   };
 }
