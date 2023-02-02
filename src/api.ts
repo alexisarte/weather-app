@@ -125,6 +125,16 @@ const api = {
 
       return formatWeather(response);
     },
+    fetchByCoords: async (lat: number, lon: number): Promise<Weather> => {
+      const request = await fetch(
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${
+          import.meta.env.VITE_API_KEY
+        }`
+      );
+      const response: RawWeather = await request.json();
+
+      return formatWeather(response);
+    },
   },
 };
 

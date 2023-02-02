@@ -19,14 +19,22 @@ function App() {
   const handleChangeCity = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const city = CITIES.find((city) => city.id === e.target.value) || CITIES[0];
     setCity(city);
-  };
-
-  useEffect(() => {
     api.weather.fetch(city).then((weather) => {
       setWeather(weather);
       setStatus('success');
     });
-  }, [city]);
+  };
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        api.weather.fetchByCoords(position.coords.latitude, position.coords.longitude).then((weather) => {
+          setWeather(weather);
+          setStatus('success');
+        });
+      });
+    }
+  }, []);
 
   if (status === 'pending') {
     return <div>Cargando...</div>;
